@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Signup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tryreg.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"/>
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById('FN').value;
+            var lastName = document.getElementById('LN').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (firstName === '' || lastName === '' || email === '' || password === '') {
+                alert('All fields must be filled out');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="background">
+       <div class="container">
+            <form action="tryreg.php" method="post" onsubmit="return validateForm()">
+                <h1>SIGNUP</h1>
+                <div>
+                    <input type="text" id="FN" name="FN" placeholder="Enter your first name">
+                </div>
+                <div>
+                    <input type="text" id="LN" name="LN" placeholder="Enter your last name">
+                </div>
+                <div>
+                    <input type="text" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" name="Register">Signup</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
